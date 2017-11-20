@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+  background-color: #DEDBDE;
+}
+
+body {
+  /*                background-color: red;*/
+  background-color: white;
+  position: relative;
+  padding-bottom: 5em;
+  font-family: Georgia, serif;
+}
+
+h2 {
+  color: #31568c;
+  margin: 0;
+  letter-spacing: 0.125em;
+  font-weight: 600;
+  font-size: 2em;
+  font-family: Georgia, serif;
+  padding: 1em .5em 1em .5em;
+  font-variant: small-caps;
+  clear: both;
+}
+
+i {
+  font-style: italic;
+}
