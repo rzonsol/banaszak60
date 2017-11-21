@@ -1,0 +1,19 @@
+ul{
+  list-style: none;
+  font-size: 1.3em;
+}
+li{
+  margin-bottom: .5em;
+  display: block;
+}
+
+@media screen and (max-width: 600px){
+  ul{
+    list-style: none;
+    font-size: 1.2em;
+  }
+  li{
+    margin-bottom: .5em;
+    display: block;
+  }
+}

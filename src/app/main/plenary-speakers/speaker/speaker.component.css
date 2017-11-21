@@ -1,3 +1,11 @@
 a{
   cursor: pointer;
+  font-size: 1.5em;
+  display: inline;
+  color: black;
+  text-align: center;
+
+}
+.red{
+  background-color: red;
 }

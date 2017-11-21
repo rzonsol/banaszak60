@@ -7,6 +7,8 @@ import {AlertModule} from 'ngx-bootstrap';
 import {WelcometComponent} from './main/welcomet/welcomet.component';
 import {PlenarySpeakersComponent} from './main/plenary-speakers/plenary-speakers.component';
 import {SpeakerComponent} from './main/plenary-speakers/speaker/speaker.component';
+import {ScientificComitteeComponent} from './main/scientific-comittee/scientific-comittee.component';
+import {OrganizersComponent} from './main/organizers/organizers.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import {SpeakerComponent} from './main/plenary-speakers/speaker/speaker.componen
     MainComponent,
     WelcometComponent,
     PlenarySpeakersComponent,
-    SpeakerComponent
+    SpeakerComponent,
+    ScientificComitteeComponent,
+    OrganizersComponent
   ],
   imports: [
     BrowserModule,

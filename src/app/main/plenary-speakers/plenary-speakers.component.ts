@@ -8,7 +8,18 @@ import {Participant} from '../../model/Participant';
 })
 export class PlenarySpeakersComponent implements OnInit {
 
-  participants: Participant[] = [new Participant(1, 'piotr', 'rzonsowski', 'brak')];
+  participants: Participant[] = [new Participant(1, 'Piotr', 'Rzonsowski', 'brak'),
+    new Participant(1, 'Piotr', 'Rzonsowski', 'brak'),
+    new Participant(1, 'Piotr', 'Rzonsowski', 'brak'),
+    new Participant(1, 'Piotr', 'Rzonsowski', 'brak'),
+    new Participant(1, 'Piotr', 'Rzonsowski', 'brak'),
+    new Participant(1, 'Piotr', 'Rzonsowski', 'brak'),
+    new Participant(1, 'Piotr', 'Rzonsowski', 'brak'),
+    new Participant(1, 'Piotr', 'Rzonsowski', 'brak'),
+    new Participant(1, 'Piotr', 'Rzonsowski', 'brak'),
+    new Participant(1, 'Piotr', 'Rzonsowski', 'brak'),
+    new Participant(1, 'Piotr', 'Rzonsowski', 'brak'),
+    new Participant(1, 'Piotr', 'Rzonsowski', 'brak')];
   constructor() { }
 
   ngOnInit() {
