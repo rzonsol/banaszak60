@@ -13,6 +13,7 @@ import {AlertService} from "./alert/alert.service";
 import {SpeakersService} from "./service/speakers.service";
 import {HttpModule} from "@angular/http";
 import {RouterModule, Routes} from "@angular/router";
+import {FormComponent} from './form/form.component';
 
 const appRoutes: Routes = [
   {path: '', component: MainComponent}
@@ -27,7 +28,8 @@ const appRoutes: Routes = [
     SpeakerComponent,
     ScientificComitteeComponent,
     OrganizersComponent,
-    AlertComponent
+    AlertComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,

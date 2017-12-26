@@ -29,7 +29,7 @@ export class PlenarySpeakersComponent implements OnInit {
         p => {
           this.participants = p;
           if (p.length === 0) {
-            this.alertService.error('thes no speakers on server or the conection faild');
+            this.alertService.error('There no speakers on server or the conection faild');
           }
         },
         err => {
