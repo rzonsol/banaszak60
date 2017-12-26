@@ -9,14 +9,15 @@ import {SpeakerComponent} from './main/plenary-speakers/speaker/speaker.componen
 import {ScientificComitteeComponent} from './main/scientific-comittee/scientific-comittee.component';
 import {OrganizersComponent} from './main/organizers/organizers.component';
 import {AlertComponent} from './alert/alert.component';
-import {AlertService} from "./alert/alert.service";
-import {SpeakersService} from "./service/speakers.service";
-import {HttpModule} from "@angular/http";
-import {RouterModule, Routes} from "@angular/router";
+import {AlertService} from './alert/alert.service';
+import {SpeakersService} from './service/speakers.service';
+import {HttpModule} from '@angular/http';
+import {RouterModule, Routes} from '@angular/router';
 import {FormComponent} from './form/form.component';
 
 const appRoutes: Routes = [
-  {path: '', component: MainComponent}
+  {path: '', component: MainComponent},
+  {path: 'form', component: FormComponent}
 ];
 
 @NgModule({
