@@ -1,7 +1,23 @@
 a{
-  box-decoration-break:none;
+  text-decoration:none;
   padding-bottom: 1em;
 }
 .extraSpace{
   padding-bottom: 2em;
+}
+
+.ng-invalid.ng-touched.form-control{
+  border: 1px red solid;
+}
+.help-block{
+  color: red;
+  font-size: 0.7em;
+}
+.required:after {
+  content:" *";
+  color: red;
+}
+.explain{
+  margin-top: 1em;
+  font-size: 0.7em;
 }

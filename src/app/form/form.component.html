@@ -7,45 +7,61 @@ col-md-12
 ">
   <h2>Registration Form</h2>
   <div class="row">
-    <form>
+    <form [formGroup]="singupForm" (ngSubmit)="onSubmit()">
       <div class="form-group">
-        <label for="firstName">First name</label>
+        <label for="firstName" class="required">First name</label>
         <input
           type="text"
           id="firstName"
+          formControlName="firstName"
           class="form-control"
+          placeholder="First name"
         />
+        <span class="help-block" *ngIf="!singupForm.get('firstName').valid && singupForm.get('firstName').touched">Pleas enter a valid first name</span>
       </div>
       <div class="form-group">
-        <label for="lastName">Last name</label>
+        <label for="lastName" class="required">Last name</label>
         <input
           type="text"
           id="lastName"
+          formControlName="lastName"
           class="form-control"
+          placeholder="Last name"
         />
+        <span class="help-block" *ngIf="!singupForm.get('lastName').valid && singupForm.get('lastName').touched">Pleas enter a valid last name</span>
+
       </div>
       <div class="form-group">
-        <label for="email">Email</label>
+        <label for="email" class="required">Email</label>
         <input
           type="text"
           id="email"
+          formControlName="email"
           class="form-control"
+          placeholder="Email"
         />
+        <span class="help-block" *ngIf="!singupForm.get('email').valid && singupForm.get('email').touched">Pleas enter a valid first name</span>
+
       </div>
       <div class="form-group">
-        <label for="affiliation">Affiliation</label>
+        <label for="affiliation" class="required">Affiliation</label>
         <input
           type="text"
           id="affiliation"
+          formControlName="affiliation"
           class="form-control"
+          placeholder="Affiliation"
         />
+        <span class="help-block" *ngIf="!singupForm.get('affiliation').valid && singupForm.get('affiliation').touched">Pleas enter a valid first name</span>
       </div>
       <div class="form-group">
         <label for="phoneNumber">Phone number</label>
         <input
           type="text"
           id="phoneNumber"
+          formControlName="phoneNumber"
           class="form-control"
+          placeholder="Phone number"
         />
       </div>
       <div class="form-group">
@@ -53,12 +69,17 @@ col-md-12
         <textarea
           type="text"
           id="specialRequest"
+          formControlName="specialRequest"
           class="form-control"
           rows="5"
+          placeholder="Special request"
         ></textarea>
+        <div class="row explain">
+          <span class="required"></span> - required fields
+        </div>
         <hr/>
         <button class="btn btn-primary" type="submit">Submit</button>
-        <button class="btn btn-danger" (click)="onClearForm()">Clear form</button>
+        <button class="btn btn-danger" (click)="onClearForm()" type="reset">Clear form</button>
         <button class="btn btn-info" (click)="onGoBack()">Go back</button>
       </div>
     </form>
