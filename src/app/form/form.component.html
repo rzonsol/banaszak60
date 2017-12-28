@@ -7,7 +7,7 @@ col-md-12
 ">
   <h2>Registration Form</h2>
   <div class="row">
-    <form [formGroup]="singupForm" (ngSubmit)="onSubmit()">
+    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
       <div class="form-group">
         <label for="firstName" class="required">First name</label>
         <input
@@ -17,7 +17,7 @@ col-md-12
           class="form-control"
           placeholder="First name"
         />
-        <span class="help-block" *ngIf="!singupForm.get('firstName').valid && singupForm.get('firstName').touched">Pleas enter a valid first name</span>
+        <span class="help-block" *ngIf="!signupForm.get('firstName').valid && signupForm.get('firstName').touched">Pleas enter a valid first name</span>
       </div>
       <div class="form-group">
         <label for="lastName" class="required">Last name</label>
@@ -28,7 +28,7 @@ col-md-12
           class="form-control"
           placeholder="Last name"
         />
-        <span class="help-block" *ngIf="!singupForm.get('lastName').valid && singupForm.get('lastName').touched">Pleas enter a valid last name</span>
+        <span class="help-block" *ngIf="!signupForm.get('lastName').valid && signupForm.get('lastName').touched">Pleas enter a valid last name</span>
 
       </div>
       <div class="form-group">
@@ -40,7 +40,7 @@ col-md-12
           class="form-control"
           placeholder="Email"
         />
-        <span class="help-block" *ngIf="!singupForm.get('email').valid && singupForm.get('email').touched">Pleas enter a valid first name</span>
+        <span class="help-block" *ngIf="!signupForm.get('email').valid && signupForm.get('email').touched">Pleas enter a valid first name</span>
 
       </div>
       <div class="form-group">
@@ -52,7 +52,7 @@ col-md-12
           class="form-control"
           placeholder="Affiliation"
         />
-        <span class="help-block" *ngIf="!singupForm.get('affiliation').valid && singupForm.get('affiliation').touched">Pleas enter a valid first name</span>
+        <span class="help-block" *ngIf="!signupForm.get('affiliation').valid && signupForm.get('affiliation').touched">Pleas enter a valid first name</span>
       </div>
       <div class="form-group">
         <label for="phoneNumber">Phone number</label>

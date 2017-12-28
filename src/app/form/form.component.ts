@@ -10,13 +10,13 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
 })
 export class FormComponent implements OnInit {
 
-  singupForm: FormGroup;
+  signupForm: FormGroup;
 
 
   constructor(private router: Router) { }
 
   ngOnInit() {
-    this.singupForm = new FormGroup({
+    this.signupForm = new FormGroup({
       'firstName': new FormControl(null, Validators.required),
       'lastName': new FormControl(null, Validators.required),
       'email': new FormControl(null, [Validators.required, Validators.email]),
@@ -30,15 +30,15 @@ export class FormComponent implements OnInit {
   }
 
   onClearForm() {
-    this.singupForm.reset();
+    this.signupForm.reset();
   }
 
   onSubmit() {
     // todo
-    if (this.singupForm.valid) {
-      console.log(this.singupForm.value);
+    if (this.signupForm.valid) {
+      console.log(this.signupForm.value);
     }else {
-      (<any>Object).values(this.singupForm.controls).forEach(
+      (<any>Object).values(this.signupForm.controls).forEach(
         c => {
           c.markAsTouched();
         }
