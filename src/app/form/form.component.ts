@@ -41,12 +41,20 @@ export class FormComponent implements OnInit {
   }
 
   onSubmit() {
-    // todo
     if (this.signupForm.valid) {
       console.log(this.signupForm.value);
+      this.disableBtn = true;
       this.alertService.info('Your application has been sent.');
-      this.formService.saveParticipant(this.createdRequestDto());
+      this.formService.saveParticipant(this.createdRequestDto()).subscribe(
+        data => {
+          this.successRegistration(data);
+        },
+        err => {
+          this.errorRegistration(err);
+        }
+      );
     }else {
+      this.disableBtn = false;
       (<any>Object).values(this.signupForm.controls).forEach(
         c => {
           c.markAsTouched();
@@ -54,6 +62,19 @@ export class FormComponent implements OnInit {
       );
     }
   }
+
+  private errorRegistration(err) {
+    console.log(err);
+    this.alertService.error(err.text());
+    this.disableBtn = err.ok;
+  }
+
+  private successRegistration(data) {
+    console.log(data);
+    this.disableBtn = data.ok;
+    this.alertService.success('Thank you for registration, within 48 hours you will receive an e-mail with confirmation of registration');
+  }
+
   private createdRequestDto(): ParticipantSignUpRequest {
     return new ParticipantSignUpRequest(
       this.signupForm.get('firstName').value,

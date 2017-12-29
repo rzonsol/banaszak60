@@ -41,10 +41,6 @@ export class AlertService {
 
   info(message: string, keepAfterRouteChange = false) {
     this.alert(AlertType.Info, message, keepAfterRouteChange);
-    setTimeout(() => {
-      this.clear();
-      console.log('Close alert component.');
-    }, 3000);
   }
 
   finctionNotImpl(){
