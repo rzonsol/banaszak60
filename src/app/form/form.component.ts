@@ -1,7 +1,13 @@
-///<reference path="../../../node_modules/@angular/forms/src/model.d.ts"/>
+
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
+
+import {Constants} from '../model/Constants';
+import {ParticipantSignUpRequest} from '../model/ParticipantSignUpRequest';
+import {FormService} from '../service/form.service';
+import {AlertService} from '../alert/alert.service';
+
 
 @Component({
   selector: 'app-form',
@@ -11,9 +17,10 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
 export class FormComponent implements OnInit {
 
   signupForm: FormGroup;
+  disableBtn= false;
 
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private formService: FormService, private alertService: AlertService) { }
 
   ngOnInit() {
     this.signupForm = new FormGroup({
@@ -37,6 +44,8 @@ export class FormComponent implements OnInit {
     // todo
     if (this.signupForm.valid) {
       console.log(this.signupForm.value);
+      this.alertService.info('Your application has been sent.');
+      this.formService.saveParticipant(this.createdRequestDto());
     }else {
       (<any>Object).values(this.signupForm.controls).forEach(
         c => {
@@ -44,6 +53,17 @@ export class FormComponent implements OnInit {
         }
       );
     }
+  }
+  private createdRequestDto(): ParticipantSignUpRequest {
+    return new ParticipantSignUpRequest(
+      this.signupForm.get('firstName').value,
+      this.signupForm.get('lastName').value,
+      this.signupForm.get('email').value,
+      this.signupForm.get('phoneNumber').value,
+      this.signupForm.get('specialRequest').value,
+      Constants.CONFERENCE_ID,
+      this.signupForm.get('affiliation').value,
+    );
   }
 
 }

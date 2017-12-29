@@ -6,6 +6,7 @@ col-md-offset-0
 col-md-12
 ">
   <h2>Registration Form</h2>
+  <app-alert></app-alert>
   <div class="row">
     <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
       <div class="form-group">
@@ -78,8 +79,8 @@ col-md-12
           <span class="required"></span> - required fields
         </div>
         <hr/>
-        <button class="btn btn-primary" type="submit">Submit</button>
-        <button class="btn btn-danger" (click)="onClearForm()" type="reset">Clear form</button>
+        <button class="btn btn-primary" type="submit" [disabled]="disableBtn">Submit</button>
+        <button class="btn btn-danger" (click)="onClearForm()" type="reset" [disabled]="disableBtn">Clear form</button>
         <button class="btn btn-info" (click)="onGoBack()">Go back</button>
       </div>
     </form>

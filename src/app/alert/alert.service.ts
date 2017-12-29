@@ -1,3 +1,4 @@
+///<reference path="alert.ts"/>
 import {Injectable} from '@angular/core';
 import {Subject} from 'rxjs/Subject';
 import {Alert} from './alert';
@@ -57,7 +58,7 @@ export class AlertService {
   alert(type: AlertType, message: string, keepAfterRouteChange = false) {
     this.clear();
     this.keepAfterRouteChange = keepAfterRouteChange;
-    this.subject.next(<Alert>{ type: type, message: message });
+    this.subject.next( { type: type, message: message } );
   }
 
   clear() {

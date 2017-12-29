@@ -15,6 +15,7 @@ import {HttpModule} from '@angular/http';
 import {RouterModule, Routes} from '@angular/router';
 import {FormComponent} from './form/form.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {FormService} from './service/form.service';
 
 const appRoutes: Routes = [
   {path: '', component: MainComponent},
@@ -40,7 +41,7 @@ const appRoutes: Routes = [
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [AlertService, SpeakersService],
+  providers: [AlertService, SpeakersService, FormService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
