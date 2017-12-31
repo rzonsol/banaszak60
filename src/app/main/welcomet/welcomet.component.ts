@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-welcomet',
@@ -7,9 +8,12 @@ import {Component, OnInit} from '@angular/core';
 })
 export class WelcometComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
+  onFormLink() {
+    this.router.navigate(['/form']);
+  }
 }
