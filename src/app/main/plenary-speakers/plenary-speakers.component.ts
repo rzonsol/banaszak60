@@ -30,6 +30,10 @@ export class PlenarySpeakersComponent implements OnInit {
           this.participants = p;
           if (p.length === 0) {
             this.alertService.error('There no speakers on server or the conection faild');
+          }else {
+            this.participants.sort(function (a, b) {
+              return a.lastName.localeCompare(b.lastName);
+            });
           }
         },
         err => {
