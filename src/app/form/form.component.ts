@@ -1,4 +1,3 @@
-
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
@@ -29,7 +28,10 @@ export class FormComponent implements OnInit {
       'email': new FormControl(null, [Validators.required, Validators.email]),
       'affiliation': new FormControl(null, Validators.required),
       'phoneNumber': new FormControl(null),
-      'specialRequest': new FormControl(null)
+      'specialRequest': new FormControl(null),
+      'citizenship': new FormControl(null),
+      'arrivalDate': new FormControl(null),
+      'departureDate': new FormControl(null)
     });
   }
   onGoBack() {
@@ -84,6 +86,9 @@ export class FormComponent implements OnInit {
       this.signupForm.get('specialRequest').value,
       Constants.CONFERENCE_ID,
       this.signupForm.get('affiliation').value,
+      this.signupForm.get('citizenship').value,
+      this.signupForm.get('arrivalDate').value,
+      this.signupForm.get('departureDate').value,
     );
   }
 
