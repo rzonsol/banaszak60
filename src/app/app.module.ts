@@ -16,10 +16,12 @@ import {RouterModule, Routes} from '@angular/router';
 import {FormComponent} from './form/form.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {FormService} from './service/form.service';
+import {ConferenceFeeComponent} from './conference-fee/conference-fee.component';
 
 const appRoutes: Routes = [
   {path: '', component: MainComponent},
-  {path: 'form', component: FormComponent}
+  {path: 'form', component: FormComponent},
+  {path: 'fee', component: ConferenceFeeComponent}
 ];
 
 @NgModule({
@@ -32,7 +34,8 @@ const appRoutes: Routes = [
     ScientificComitteeComponent,
     OrganizersComponent,
     AlertComponent,
-    FormComponent
+    FormComponent,
+    ConferenceFeeComponent
   ],
   imports: [
     BrowserModule,

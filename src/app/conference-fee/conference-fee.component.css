@@ -1,0 +1,15 @@
+p {
+  text-indent: 2em;
+  padding-left: 1.5em;
+  font-size: 1.3em;
+  text-align: justify;
+}
+
+.iban {
+  display: block;
+  text-indent: 0em;
+  margin-left: 3em;
+  padding-top: .5em;
+  padding-bottom: 1em;
+
+}
