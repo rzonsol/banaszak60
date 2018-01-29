@@ -17,6 +17,7 @@ import {FormComponent} from './form/form.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {FormService} from './service/form.service';
 import {ConferenceFeeComponent} from './conference-fee/conference-fee.component';
+import { SponsorsComponent } from './sponsors/sponsors.component';
 
 const appRoutes: Routes = [
   {path: '', component: MainComponent},
@@ -35,7 +36,8 @@ const appRoutes: Routes = [
     OrganizersComponent,
     AlertComponent,
     FormComponent,
-    ConferenceFeeComponent
+    ConferenceFeeComponent,
+    SponsorsComponent
   ],
   imports: [
     BrowserModule,

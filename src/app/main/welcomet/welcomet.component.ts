@@ -16,4 +16,7 @@ export class WelcometComponent implements OnInit {
   onFormLink() {
     this.router.navigate(['/form']);
   }
+  onFeeLink(){
+    this.router.navigate(['/fee']);
+  }
 }

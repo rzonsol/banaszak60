@@ -1,0 +1,21 @@
+.sponsors{
+  display: block;
+  margin-top: 1em;
+  align-content: center;
+  text-align: center;
+}
+.clear{
+  clear: both;
+  margin-top: 5em;
+}
+h3{
+  font-size: 1.5em;
+  color: #31568c;
+  margin: 0;
+  letter-spacing: 0.125em;
+  font-weight: 600;
+  font-family: Georgia, serif;
+  padding: 1em .5em 1em .5em;
+  font-variant: small-caps;
+}
+
