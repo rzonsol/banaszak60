@@ -18,11 +18,16 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {FormService} from './service/form.service';
 import {ConferenceFeeComponent} from './conference-fee/conference-fee.component';
 import { SponsorsComponent } from './sponsors/sponsors.component';
+import { NavComponent } from './nav/nav.component';
+import { ParticipantsComponent } from './participants/participants.component';
+import { ParticipantComponent } from './Participants/participant/participant.component';
+import {ParticipantsService} from './service/participants.service';
 
 const appRoutes: Routes = [
   {path: '', component: MainComponent},
   {path: 'form', component: FormComponent},
-  {path: 'fee', component: ConferenceFeeComponent}
+  {path: 'fee', component: ConferenceFeeComponent},
+  {path: 'participants', component: ParticipantsComponent}
 ];
 
 @NgModule({
@@ -37,7 +42,10 @@ const appRoutes: Routes = [
     AlertComponent,
     FormComponent,
     ConferenceFeeComponent,
-    SponsorsComponent
+    SponsorsComponent,
+    NavComponent,
+    ParticipantsComponent,
+    ParticipantComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +54,7 @@ const appRoutes: Routes = [
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [AlertService, SpeakersService, FormService],
+  providers: [AlertService, SpeakersService, FormService, ParticipantsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

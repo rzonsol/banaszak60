@@ -18,4 +18,3 @@ export class SpeakerComponent implements OnInit {
 
 }
 
-// todo add css

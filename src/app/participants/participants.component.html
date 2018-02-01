@@ -1,0 +1,16 @@
+<div class="container
+container-fluid
+col-lg-offset-1
+col-lg-10
+col-md-offset-0
+col-md-12
+">
+  <h2>Participants</h2>
+  <app-participant
+    *ngFor="let participant of participants"
+    [participant]="participant"
+    class="  col-sm-12
+              spaces
+              "
+  ></app-participant>
+</div>

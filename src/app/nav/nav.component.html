@@ -1,0 +1,14 @@
+<ul class="nav
+nav-tabs
+navbar-fixed-top
+col-lg-offset-1
+col-lg-10
+col-md-offset-0
+col-md-12
+backgroundmenu
+">
+  <li role="presentation" [ngClass]="{'active': setActiveClass('/')}" ><a (click)="onHomeBtn()">Home</a></li>
+  <li role="presentation" [ngClass]="{'active': setActiveClass('/fee')}"><a (click)="onFeeBtn()">Conference fee</a></li>
+  <li role="presentation" [ngClass]="{'active': setActiveClass('/form')}"><a (click)="onFormBtn()">Registration form</a></li>
+  <li role="presentation" [ngClass]="{'active': setActiveClass('/participants')}"><a (click)="onParticipantsBtn()">Participants</a></li>
+</ul>
