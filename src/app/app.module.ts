@@ -22,6 +22,7 @@ import { NavComponent } from './nav/nav.component';
 import { ParticipantsComponent } from './participants/participants.component';
 import { ParticipantComponent } from './Participants/participant/participant.component';
 import {ParticipantsService} from './service/participants.service';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 const appRoutes: Routes = [
   {path: '', component: MainComponent},
@@ -52,7 +53,8 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     HttpModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgbModule.forRoot()
   ],
   providers: [AlertService, SpeakersService, FormService, ParticipantsService],
   bootstrap: [AppComponent]

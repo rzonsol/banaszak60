@@ -21,3 +21,11 @@ a{
   margin-top: 1em;
   font-size: 0.7em;
 }
+#arrivalDate, #departureDate{
+  width: 10em;
+  display: inline-block;
+}
+
+#arrivalDateBtn, #departureDateBtn{
+  margin-bottom: .2em;
+}

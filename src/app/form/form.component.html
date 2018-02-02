@@ -76,6 +76,36 @@ col-md-12
         />
       </div>
       <div class="form-group">
+        <label for="arrivalDate">Arrival Date</label>
+        <div>
+          <input class="form-control"
+                 id="arrivalDate"
+                 placeholder="yyyy-mm-dd"
+                 name="arrivalDate"
+                 formControlName="arrivalDate"
+                 [(ngModel)]="arrivalDate"
+                 ngbDatepicker #d="ngbDatepicker">
+            <button class="btn btn-outline-secondary" (click)="d.toggle()" type="button" id="arrivalDateBtn">
+              <img src="../../assets/graphics/calendar-icon.svg" style="width: 1.2rem; height: 1rem; cursor: pointer;"/>
+            </button>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="departureDate">Departure Date</label>
+        <div>
+          <input class="form-control"
+                 id="departureDate"
+                 placeholder="yyyy-mm-dd"
+                 name="departureDate"
+                 formControlName="departureDate"
+                 [(ngModel)]="departureDate"
+                 ngbDatepicker #e="ngbDatepicker">
+          <button class="btn btn-outline-secondary" (click)="e.toggle()" type="button" id="departureDateBtn">
+            <img src="../../assets/graphics/calendar-icon.svg" style="width: 1.2rem; height: 1rem; cursor: pointer;"/>
+          </button>
+        </div>
+      </div>
+      <div class="form-group">
         <label for="specialRequest">Special requests</label>
         <textarea
           type="text"
