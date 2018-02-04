@@ -29,3 +29,7 @@ a{
 #arrivalDateBtn, #departureDateBtn{
   margin-bottom: .2em;
 }
+
+.noStrong {
+  font-weight: lighter;
+}

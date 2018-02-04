@@ -29,7 +29,7 @@ export class FormComponent implements OnInit {
       'affiliation': new FormControl(null, Validators.required),
       'phoneNumber': new FormControl(null),
       'specialRequest': new FormControl(null),
-      'citizenship': new FormControl(null),
+      'citizenship': new FormControl(null, Validators.required),
       'arrivalDate': new FormControl(null),
       'departureDate': new FormControl(null)
     });

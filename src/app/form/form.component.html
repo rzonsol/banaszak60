@@ -45,7 +45,8 @@ col-md-12
 
       </div>
       <div class="form-group">
-        <label for="affiliation" class="required">Affiliation</label>
+        <label for="affiliation" class="required">Affiliation<span class="small noStrong">(if you are a PhD student please indicate also the name of your supervisor)</span>
+        </label>
         <input
           type="text"
           id="affiliation"
@@ -66,7 +67,7 @@ col-md-12
       <!--/>-->
       <!--</div>-->
       <div class="form-group">
-        <label for="citizenship">Citizenship</label>
+        <label for="citizenship" class="required">Citizenship</label>
         <input
           type="text"
           id="citizenship"
@@ -74,6 +75,8 @@ col-md-12
           class="form-control"
           placeholder="Citizenship"
         />
+        <span class="help-block" *ngIf="!signupForm.get('citizenship').valid && signupForm.get('citizenship').touched">Pleas enter value</span>
+
       </div>
       <div class="form-group">
         <label for="arrivalDate">Arrival Date</label>
