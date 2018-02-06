@@ -3,6 +3,7 @@ import {Participant} from '../model/Participant';
 import {AlertService} from '../alert/alert.service';
 import {SpeakersService} from '../service/speakers.service';
 import {ParticipantsService} from '../service/participants.service';
+import {Constants} from '../model/Constants';
 
 @Component({
   selector: 'app-participants',
@@ -38,9 +39,12 @@ export class ParticipantsComponent implements OnInit {
           }
         },
         err => {
-          this.errorService = true;
-          this.alertService.error(err.json().error_description);
+          this.errorRegistration(Constants.SERVER_ERROR);
         }
       );
+  }
+  private errorRegistration(err) {
+    console.log(err);
+    this.alertService.error(err);
   }
 }

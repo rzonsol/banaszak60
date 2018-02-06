@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Participant} from '../../model/Participant';
 import {SpeakersService} from '../../service/speakers.service';
 import {AlertService} from '../../alert/alert.service';
+import {Constants} from '../../model/Constants';
 
 @Component({
   selector: 'app-plenary-speakers',
@@ -37,11 +38,15 @@ export class PlenarySpeakersComponent implements OnInit {
           }
         },
         err => {
-          this.errorService = true;
-          this.alertService.error(err.json().error_description);
+          this.errorRegistration(Constants.SERVER_ERROR);
         }
       );
     }
+
+  private errorRegistration(err) {
+    console.log(err);
+    this.alertService.error(err);
+  }
 }
 
 // todo add service witch get data from server
