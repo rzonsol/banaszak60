@@ -23,6 +23,7 @@ import { ParticipantsComponent } from './participants/participants.component';
 import { ParticipantComponent } from './Participants/participant/participant.component';
 import {ParticipantsService} from './service/participants.service';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {HttpClientModule} from '@angular/common/http';
 
 const appRoutes: Routes = [
   {path: '', component: MainComponent},
@@ -51,7 +52,7 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
-    HttpModule,
+    HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
     NgbModule.forRoot()

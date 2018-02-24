@@ -1,7 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Participant} from '../model/Participant';
 import {AlertService} from '../alert/alert.service';
-import {SpeakersService} from '../service/speakers.service';
 import {ParticipantsService} from '../service/participants.service';
 import {Constants} from '../model/Constants';
 

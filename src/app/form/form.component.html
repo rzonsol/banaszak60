@@ -86,7 +86,6 @@ col-md-12
                  placeholder="yyyy-mm-dd"
                  name="arrivalDate"
                  formControlName="arrivalDate"
-                 [(ngModel)]="arrivalDate"
                  ngbDatepicker #d="ngbDatepicker">
             <button class="btn btn-outline-secondary" (click)="d.toggle()" type="button" id="arrivalDateBtn">
               <img src="../../assets/graphics/calendar-icon.svg" style="width: 1.2rem; height: 1rem; cursor: pointer;"/>
@@ -101,7 +100,6 @@ col-md-12
                  placeholder="yyyy-mm-dd"
                  name="departureDate"
                  formControlName="departureDate"
-                 [(ngModel)]="departureDate"
                  ngbDatepicker #e="ngbDatepicker">
           <button class="btn btn-outline-secondary" (click)="e.toggle()" type="button" id="departureDateBtn">
             <img src="../../assets/graphics/calendar-icon.svg" style="width: 1.2rem; height: 1rem; cursor: pointer;"/>

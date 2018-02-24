@@ -5,17 +5,18 @@ import {Participant} from '../model/Participant';
 import {AlertService} from '../alert/alert.service';
 import 'rxjs/add/operator/map';
 import {Constants} from '../model/Constants';
+import {HttpClient} from '@angular/common/http';
 
 @Injectable()
 export class SpeakersService {
 
-  constructor(private http: Http,
+  constructor(private http: HttpClient,
               private alertServiceService: AlertService) { }
 
   getSpeakers(): Observable<Participant[]> {
     return this.http
       .get(Constants.SPEAKERS_URL)
-      .map(response => response.json() as Participant[]);
+      .map(response => response as Participant[]);
   }
 
   private handleError(error: any) {
