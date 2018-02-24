@@ -11,7 +11,7 @@ import {OrganizersComponent} from './main/organizers/organizers.component';
 import {AlertComponent} from './alert/alert.component';
 import {AlertService} from './alert/alert.service';
 import {SpeakersService} from './service/speakers.service';
-import {HttpModule} from '@angular/http';
+import {DropdownModule} from 'angular-custom-dropdown';
 import {RouterModule, Routes} from '@angular/router';
 import {FormComponent} from './form/form.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
@@ -55,6 +55,7 @@ const appRoutes: Routes = [
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    DropdownModule,
     NgbModule.forRoot()
   ],
   providers: [AlertService, SpeakersService, FormService, ParticipantsService],

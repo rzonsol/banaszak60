@@ -1,14 +1,26 @@
-<ul class="nav
-nav-tabs
-navbar-fixed-top
-col-lg-offset-1
-col-lg-10
-col-md-offset-0
-col-md-12
-backgroundmenu
-">
-  <li role="presentation" [ngClass]="{'active': setActiveClass('/')}" ><a (click)="onHomeBtn()">Home</a></li>
-  <li role="presentation" [ngClass]="{'active': setActiveClass('/fee')}"><a (click)="onFeeBtn()">Conference fee</a></li>
-  <li role="presentation" [ngClass]="{'active': setActiveClass('/form')}"><a (click)="onFormBtn()">Registration form</a></li>
-  <li role="presentation" [ngClass]="{'active': setActiveClass('/participants')}"><a (click)="onParticipantsBtn()">Participants</a></li>
-</ul>
+<div class="row d-flex justify-content-xl-center fixed-top backgroundmenu">
+  <nav class="navbar navbar-expand-xl navbar-light">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" (click)="isNavbarCollapsed = showSubMenu(isNavbarCollapsed)"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" [ngbCollapse]="isNavbarCollapsed">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item" [ngClass]="{'active': setActiveClass('/')}">
+          <a class="nav-link" (click)="onHomeBtn()">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item " [ngClass]="{'active': setActiveClass('/fee')}">
+          <a class="nav-link" (click)="onFeeBtn()">Conference fee</a>
+        </li>
+        <li class="nav-item " [ngClass]="{'active': setActiveClass('/form')}">
+          <a class="nav-link" (click)="onFormBtn()">Registration form</a>
+        </li>
+        <li class="nav-item " [ngClass]="{'active': setActiveClass('/participants')}">
+          <a class="nav-link" (click)="onParticipantsBtn()">Participants</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>

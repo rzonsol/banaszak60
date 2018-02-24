@@ -1,6 +1,12 @@
 .backgroundmenu{
   background-color: #DEDBDE;
 }
-li{
-  cursor: pointer;
-}
+/*li{*/
+  /*cursor: pointer;*/
+/*}*/
+nav a {
+   cursor: pointer;
+ }
+
+
+
