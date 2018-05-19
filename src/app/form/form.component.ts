@@ -67,7 +67,11 @@ export class FormComponent implements OnInit {
 
   private errorRegistration(err) {
     console.log(err);
-    this.alertService.error(Constants.SERVER_ERROR);
+    if (err.status === 400 ) {
+      this.alertService.error(err.error);
+    } else {
+      this.alertService.error(Constants.SERVER_ERROR);
+    }
     this.disableBtn = err.ok;
   }
 
