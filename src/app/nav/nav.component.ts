@@ -22,6 +22,10 @@ export class NavComponent implements OnInit {
     this.isNavbarCollapsed = true;
     this.router.navigate(['/participants']);
   }
+  onConferenceSiteBtn() {
+    this.isNavbarCollapsed = true;
+    this.router.navigate(['/conferenceSite']);
+  }
 
   onFormBtn() {
     this.isNavbarCollapsed = true;
@@ -30,6 +34,10 @@ export class NavComponent implements OnInit {
   onFeeBtn() {
     this.isNavbarCollapsed = true;
     this.router.navigate(['/fee']);
+  }
+  onConferencePlanBtn() {
+    this.isNavbarCollapsed = true;
+    this.router.navigate(['/plan']);
   }
   setActiveClass(btn: string): boolean {
     return this.router.url === btn;

@@ -24,12 +24,17 @@ import { ParticipantComponent } from './Participants/participant/participant.com
 import {ParticipantsService} from './service/participants.service';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {HttpClientModule} from '@angular/common/http';
+import { ConferenceSiteComponent } from './conference-site/conference-site.component';
+import { ProgramComponent } from './program/program.component';
+import { EventComponent } from './program/event/event.component';
 
 const appRoutes: Routes = [
   {path: '', component: MainComponent},
   {path: 'form', component: FormComponent},
   {path: 'fee', component: ConferenceFeeComponent},
-  {path: 'participants', component: ParticipantsComponent}
+  {path: 'participants', component: ParticipantsComponent},
+  {path: 'conferenceSite', component: ConferenceSiteComponent},
+  {path: 'plan', component: ProgramComponent}
 ];
 
 @NgModule({
@@ -47,7 +52,10 @@ const appRoutes: Routes = [
     SponsorsComponent,
     NavComponent,
     ParticipantsComponent,
-    ParticipantComponent
+    ParticipantComponent,
+    ConferenceSiteComponent,
+    ProgramComponent,
+    EventComponent
   ],
   imports: [
     BrowserModule,

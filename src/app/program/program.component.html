@@ -1,0 +1,38 @@
+<div class="container d-flex flex-column offset-lg-1">
+  <div class="row">
+    <h2>Program</h2>
+  </div>
+  <div class="offset-1">
+    <h3>Monday, August 27</h3>
+    <app-event *ngFor="let conferenceEvent of getEventByDay('Monday')"
+               [conferenceEvent] = "conferenceEvent"
+    >
+    </app-event>
+
+    <h3>Tuesday, August 28 </h3>
+    <app-event *ngFor="let conferenceEvent of getEventByDay('Tuesday')"
+               [conferenceEvent] = "conferenceEvent"
+    >
+    </app-event>
+
+    <h3>Wednesday, August 29</h3>
+    <app-event *ngFor="let conferenceEvent of getEventByDay('Wednesday')"
+               [conferenceEvent] = "conferenceEvent"
+    >
+    </app-event>
+
+    <h3>Thursday, August 30</h3>
+    <app-event *ngFor="let conferenceEvent of getEventByDay('Thursday')"
+               [conferenceEvent] = "conferenceEvent"
+    >
+    </app-event>
+
+    <h3>Friday, August 31</h3>
+    <app-event *ngFor="let conferenceEvent of getEventByDay('Friday')"
+               [conferenceEvent] = "conferenceEvent"
+    >
+    </app-event>
+  </div>
+
+
+</div>

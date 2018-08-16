@@ -11,6 +11,9 @@
         <li class="nav-item" [ngClass]="{'active': setActiveClass('/')}">
           <a class="nav-link" (click)="onHomeBtn()">Home <span class="sr-only">(current)</span></a>
         </li>
+        <li class="nav-item " [ngClass]="{'active': setActiveClass('/plan')}">
+          <a class="nav-link" (click)="onConferencePlanBtn()">Conference plan</a>
+        </li>
         <li class="nav-item " [ngClass]="{'active': setActiveClass('/fee')}">
           <a class="nav-link" (click)="onFeeBtn()">Conference fee</a>
         </li>
@@ -19,6 +22,9 @@
         </li>
         <li class="nav-item " [ngClass]="{'active': setActiveClass('/participants')}">
           <a class="nav-link" (click)="onParticipantsBtn()">Participants</a>
+        </li>
+        <li class="nav-item " [ngClass]="{'active': setActiveClass('/conferenceSite')}">
+          <a class="nav-link" (click)="onConferenceSiteBtn()">Conference site</a>
         </li>
       </ul>
     </div>
